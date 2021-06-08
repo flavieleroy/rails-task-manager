@@ -1,0 +1,22 @@
+  <h1>Edit your task :</h1>
+
+<div>
+  <%= form_for @task do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+  </div>
+  <div>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  </div>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+  <p></p>
+  <p><%= link_to "Back to tasks", tasks_path, class:"btn btn-outline-dark" %></p>
